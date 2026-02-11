@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+
+
+:root {
+  --background: #130308;
+  --foreground: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #27272a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html,
+body {
+  background: var(--background, #130308);
+  color: var(--foreground);
+  margin: 0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+}
+
+
+.pixel {
+  font-family: "Press Start 2P", monospace;
+ 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 6px;
+}
+
+.pixel {
+  font-family: var(--font-pixel), monospace;
+
+}
+@keyframes floatY {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-38px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: floatY 4.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(255,255,255,0.2));
+}
+
